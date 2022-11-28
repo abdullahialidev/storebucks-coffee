@@ -1,0 +1,133 @@
+<%- include('partials/header') -%>
+
+          <a href="/logout" class="col-3 btn btn-primary">Logout</a>
+          <section class="mainBox clearfix">
+            <div class="menuContainer">
+                <form action="/" method="POST">
+                    <input class="customerInfo" type="text" name="customerName" placeholder="Input Customer Name.....">
+                    <div class="coldDrinks">
+                        <p> Cold Drinks </p>
+            
+                        <label for="small">Small $2.79 </label>
+                        <input  type="radio" name = "size" value="Small" id="small">
+            
+                        <label for="medium">Medium $3.89 </label>
+                        <input  type="radio" name = "size" value="Medium" id="medium">
+            
+                        <label for="large">Large $4.99 </label>
+                        <input  type="radio" name = "size" value="Large" id="large">
+            
+                        <br>
+            
+                        <label for="IcedCaramelMocha">Iced Caramel Mocha </label>
+                        <input type="radio" name = "drink" value="Iced Caramel Mocha" id="IcedCaramelMocha"> 
+            
+                        <br>
+            
+                        <label for="IcedCoffee">Iced Coffee</label>
+                        <input type="radio" name = "drink" value="Iced Coffee" id="IcedCoffee"> 
+            
+                        <br>
+                        <label for="IcedVanillaLatte">Iced Vanilla Latte</label>
+                        <input type="radio" name = "drink" value="Iced Vanilla Latte" id="IcedVanillaLatte">
+                    </div>
+                    <br>
+            
+                    </br>
+                    <div class="hotDrinks">
+                        <p> Hot Drinks </p>
+            
+                        <label for="small">Small $2.79 </label>
+                        <input  type="radio" name = "size" value="Small" id="small">
+            
+                        <label for="medium">Medium $3.89 </label>
+                        <input  type="radio" name = "size" value="Medium" id="medium">
+            
+                        <label for="large">Large $4.99 </label>
+                        <input  type="radio" name = "size" value="Large" id="large">
+            
+                        <br>
+            
+                        <label for="WhiteChocolateMocha">White Chocolate Mocha</label>
+                        <input type="radio" name = "drink" value="White Chocolate Mocha" id="WhiteChocolateMocha">
+            
+                        <br>
+            
+                        <label for="HouseBlend">House Blend</label>
+                        <input type="radio" name = "drink" value="House Blend" id="HouseBlend">
+            
+                        <br>
+            
+                        <label for="Cappuccino">Cappuccino</label>
+                        <input type="radio" name = "drink" value="Cappuccino" id="Cappuccino">
+                    </div>
+                    <button class="col-3 btn btn-primary" type="submit" id="btn">Submit order</button>
+            
+                </form>
+            </div>
+            </section>
+
+
+          <section class="mainSection">
+            <div>
+              <div class="whereOrder">
+                <h1> Orders to be Fulfilled</h1>
+                <p>Once order is fulfilled, click the button!</p>
+              </div>
+              
+              <% if(pendingOrder.length == 0) {%>
+                <p class="whereOrder">There currently are no pending orders!</p>
+              <%} %>
+          
+              <ul>
+              <% for (let i = 0; i < pendingOrder.length; i++) {%>
+                <div class="OrderPending">
+                  <li>
+                    <span>Name: <%= pendingOrder[i].customerName%></span>
+                    <p>Order: <%= pendingOrder[i].size%> <%= pendingOrder[i].order%></p>
+                    <form
+                      class="col-1"
+                      action="/post/fulfillOrder/<%= pendingOrder[i].id %>?_method=PUT"
+                      method="POST"
+                      >
+                      <button class="btn btn-primary bi bi-check-circle" type="submit"></button>
+                    </form>
+                  </li>
+                </div>
+              <%}%>
+              </ul>
+          
+          
+          
+            </div>
+          </section>
+          
+          
+          <section class="mainSection">
+            <div >
+              <div class="whereOrder">
+                <h1>Order is fulfilled and ready for pick up!</h1>
+                <p>Delete order after pickup!</p>
+          
+              </div>
+              <ul>
+              <% for (let i = 0; i < completedOrder.length; i++) {%>
+                <div class="OrderComplete">
+                  <li>
+                    <span><%= completedOrder[i].assignedBarista%> completed: <%= completedOrder[i].customerName%>'s order</span>
+                    <p>Order: <%= completedOrder[i].size%> <%= completedOrder[i].order%></p>
+                    <form
+                    action="/post/deleteOrder/<%= completedOrder[i].id %>?_method=DELETE" 
+                    method="POST"
+                    class="col-3"
+                  >
+                    <button class="btn btn-primary bi bi-trash" type="submit"></button>
+                  </form>
+                    
+                  </li>
+                </div>
+              <%}%>
+              </ul>
+            </div>
+          </section>
+<%- include('partials/footer') -%>
