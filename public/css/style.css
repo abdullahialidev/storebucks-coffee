@@ -1,0 +1,90 @@
+body{
+    background-image: url('/imgs/shopp.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+input{
+    color: blue;
+    text-shadow: #a7bd56;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+label {
+    font-weight: bold;
+    color: white;
+}
+
+p {
+    font-weight: bold;
+    color: white;
+}
+
+span{
+    font-weight: bold;
+    color: white;
+}
+
+.form-text {
+    font-weight: bold;
+    color: white;
+}
+
+.mainBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button{
+    background-color: #00FF00;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    width: 263px;
+}
+button:hover{
+    background-color: #00FF00;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+button:active{
+    background-color: #00FF00;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+button:focus{
+    background-color: #00FF00;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    width: 281px;
+}
+.buttonone{
+    background-color: #0d6efd;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    width: 70px;
+    height: 15px;
+}
+h1{
+    font-weight: bold;
+    color:whitesmoke;
+    text-decoration: underline;
+}
+
+.mainContain{
+    margin-left: 441px;
+    margin-top: 55px;
+}
+

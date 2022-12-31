@@ -1,77 +1,77 @@
 <%- include('partials/header') -%>
-
-<main class="container">
-    <div class="row justify-content-around mt-5">
-        <a href="/login" class="col-3 btn btn-primary"> Login/Current Orders</a>
-        <a href="/signup" class="col-3 btn btn-primary"> Signup</a>
-    </div>
-</main>
-<section class="mainBox">
-    <div class="menuContainer">
-        <form action="/" method="POST">
-            <input class="customerinfo" type="text" name="customerName" placeholder="Input Customer Name.....">
-            <div class="coldDrinks">
-                <p> Cold Drinks </p>
-    
-                <label for="small">Small $2.79 </label>
-                <input  type="radio" name = "size" value="Small" id="small">
-    
-                <label for="medium">Medium $3.89 </label>
-                <input  type="radio" name = "size" value="Medium" id="medium">
-    
-                <label for="large">Large $4.99 </label>
-                <input  type="radio" name = "size" value="Large" id="large">
-    
+<body>
+    <main class="container">
+        <div class="row justify-content-around mt-5">
+            <a href="/login" class="col-3 btn btn-primary"> Login/Current Orders</a>
+            <a href="/signup" class="col-3 btn btn-primary"> Signup</a>
+        </div>
+    </main>
+    <section class="mainBox">
+        <div class="menuContainer">
+            <form action="/" method="POST">
+                <input class="customerinfo" type="text" name="customerName" placeholder="Input Customer Name.....">
+                <div class="coldDrinks">
+                    <p> Cold Drinks </p>
+        
+                    <label for="small">Small $2.79 </label>
+                    <input  type="radio" name = "size" value="Small" id="small">
+        
+                    <label for="medium">Medium $3.89 </label>
+                    <input  type="radio" name = "size" value="Medium" id="medium">
+        
+                    <label for="large">Large $4.99 </label>
+                    <input  type="radio" name = "size" value="Large" id="large">
+        
+                    <br>
+        
+                    <label for="IcedCaramelMocha">Iced Caramel Mocha </label>
+                    <input type="radio" name = "drink" value="Iced Caramel Mocha" id="IcedCaramelMocha"> 
+        
+                    <br>
+        
+                    <label for="IcedCoffee">Iced Coffee</label>
+                    <input type="radio" name = "drink" value="Iced Coffee" id="IcedCoffee"> 
+        
+                    <br>
+                    <label for="IcedVanillaLatte">Iced Vanilla Latte</label>
+                    <input type="radio" name = "drink" value="Iced Vanilla Latte" id="IcedVanillaLatte">
+                </div>
                 <br>
-    
-                <label for="IcedCaramelMocha">Iced Caramel Mocha </label>
-                <input type="radio" name = "drink" value="Iced Caramel Mocha" id="IcedCaramelMocha"> 
-    
-                <br>
-    
-                <label for="IcedCoffee">Iced Coffee</label>
-                <input type="radio" name = "drink" value="Iced Coffee" id="IcedCoffee"> 
-    
-                <br>
-                <label for="IcedVanillaLatte">Iced Vanilla Latte</label>
-                <input type="radio" name = "drink" value="Iced Vanilla Latte" id="IcedVanillaLatte">
-            </div>
-            <br>
-    
-            </br>
-            <div class="hotDrinks">
-                <p> Hot Drinks </p>
-    
-                <label for="small">Small $2.79 </label>
-                <input  type="radio" name = "size" value="Small" id="small">
-    
-                <label for="medium">Medium $3.89 </label>
-                <input  type="radio" name = "size" value="Medium" id="medium">
-    
-                <label for="large">Large $4.99 </label>
-                <input  type="radio" name = "size" value="Large" id="large">
-    
-                <br>
-    
-                <label for="WhiteChocolateMocha">White Chocolate Mocha</label>
-                <input type="radio" name = "drink" value="White Chocolate Mocha" id="WhiteChocolateMocha">
-    
-                <br>
-    
-                <label for="HouseBlend">House Blend</label>
-                <input type="radio" name = "drink" value="House Blend" id="HouseBlend">
-    
-                <br>
-    
-                <label for="Cappuccino">Cappuccino</label>
-                <input type="radio" name = "drink" value="Cappuccino" id="Cappuccino">
-            </div>
-            <button class="col-3 btn btn-primary" type="submit" id="btn">Submit order</button>
-    
-        </form>
-    </div>
-    </section>
-
+        
+                </br>
+                <div class="hotDrinks">
+                    <p> Hot Drinks </p>
+        
+                    <label for="small">Small $2.79 </label>
+                    <input  type="radio" name = "size" value="Small" id="small">
+        
+                    <label for="medium">Medium $3.89 </label>
+                    <input  type="radio" name = "size" value="Medium" id="medium">
+        
+                    <label for="large">Large $4.99 </label>
+                    <input  type="radio" name = "size" value="Large" id="large">
+        
+                    <br>
+        
+                    <label for="WhiteChocolateMocha">White Chocolate Mocha</label>
+                    <input type="radio" name = "drink" value="White Chocolate Mocha" id="WhiteChocolateMocha">
+        
+                    <br>
+        
+                    <label for="HouseBlend">House Blend</label>
+                    <input type="radio" name = "drink" value="House Blend" id="HouseBlend">
+        
+                    <br>
+        
+                    <label for="Cappuccino">Cappuccino</label>
+                    <input type="radio" name = "drink" value="Cappuccino" id="Cappuccino">
+                </div>
+                <button class="col-3 btn btn-primary" type="submit" id="btn">Submit order</button>
+        
+            </form>
+        </div>
+        </section>
+</body>
 
     
 
